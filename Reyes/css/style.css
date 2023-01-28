@@ -1,0 +1,124 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+
+}
+
+h1{
+    margin: 0 0 10px;
+    font-size: 2vw;
+}
+
+img{
+    width: 20%;
+    vertical-align: top;
+}
+
+section{
+    display: grid;
+    grid-template-columns:1fr;
+    border: 7px solid blueviolet;
+    border-radius: 20px;
+    width: 98%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.posibilidad{
+    position: relative;
+    padding: 15px 25px;
+}
+
+.texto,button{
+    text-transform: capitalize;
+    padding: 6px 12px;
+    position: absolute;
+    top: 75%;
+    font-size: 2vw;
+}
+
+.texto{
+    left: 10px;
+    background-color: rgb(192, 210, 208);
+    width: 80%;
+    text-align: left;
+}
+
+button{
+    right: 10%;
+    background-color: blueviolet;
+    color: aliceblue;
+    border: 1px solid blueviolet;
+    border-radius: 0 6px 0;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: white;
+    color: blueviolet;
+}
+
+@media only screen and (min-width:550px){
+    section{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .texto,button{
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        text-align: center;        
+    }
+
+    button{
+        border-radius: 6px;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    section{
+        width: 100%;
+    }
+}
+@media only screen and (min-width:1200px){
+    section{
+        grid-template-columns: repeat(4,1fr)
+    }
+    button,.texto{
+        font-size:calc(8px + 1.5vw);
+    }
+    .posibilidad:nth-child(1){
+        grid-column: 4;
+        grid-row: 1;
+    }
+    main{
+        display: flex;
+        align-items:center
+    }
+}
+
+.verde{
+    color: rgb(10, 228, 36);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.fondo{
+    border: 12px solid green;
+    padding: 15px;
+    grid-template-columns: 400px;
+    justify-content: center;
+
+}
+
+.ventana{
+    margin: auto;
+
+}
